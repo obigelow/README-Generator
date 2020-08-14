@@ -29,17 +29,34 @@ inquirer
             name: "credits"
         },
         {
-            type: "input",
+            type: "list",
             message: "License?",
+            choices: ["1","2"],
             name: "license"
-        }
+        },
+        {
+            type: "input",
+            message: "What tests?",
+            name: "test"
+        },
+        {
+            type: "input",
+            message: "Questions?",
+            name: "question"
+        },
     ]).then(response => {
+        var titleContent = response.project.toLowerCase().split(" ").join("-")
         fs.writeFile("EADME.md", "#" + response.project + "\n", (error) => {
             if (error) {
                 console.log("error")
             }
         })
         fs.appendFile("EADME.md", "##Description\n" + response.description + "\n", (error) => {
+            if (error) {
+                console.log("error")
+            }
+        })
+        fs.appendFile("EADME.md", "[Title](#" + titleContent +")\n", (error) => {
             if (error) {
                 console.log("error")
             }
@@ -60,6 +77,16 @@ inquirer
             }
         })
         fs.appendFile("EADME.md", "##License\n" + response.license + "\n", (error) => {
+            if (error) {
+                console.log("error")
+            }
+        })
+        fs.appendFile("EADME.md", "##Tests\n" + response.test + "\n", (error) => {
+            if (error) {
+                console.log("error")
+            }
+        })
+        fs.appendFile("EADME.md", "##Question\n" + response.question + "\n", (error) => {
             if (error) {
                 console.log("error")
             }
