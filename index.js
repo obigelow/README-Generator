@@ -46,12 +46,12 @@ inquirer
         },
     ]).then(response => {
         var titleContent = response.project.toLowerCase().split(" ").join("-")
-        fs.writeFile("EADME.md", "#" + response.project + "\n", (error) => {
+        fs.writeFile("EADME.md", "# " + response.project + "\n", (error) => {
             if (error) {
                 console.log("error")
             }
         })
-        fs.appendFile("EADME.md", "##Description\n" + response.description + "\n", (error) => {
+        fs.appendFile("EADME.md", "## Description\n" + response.description + "\n", (error) => {
             if (error) {
                 console.log("error")
             }
@@ -61,32 +61,32 @@ inquirer
                 console.log("error")
             }
         })
-        fs.appendFile("EADME.md", "##Installation\n" + response.install + "\n", (error) => {
+        fs.appendFile("EADME.md", "## Installation\n" + response.install + "\n", (error) => {
             if (error) {
                 console.log("error")
             }
         })
-        fs.appendFile("EADME.md", "##Usage\n" + response.use + "\n", (error) => {
+        fs.appendFile("EADME.md", "## Usage\n" + response.use + "\n", (error) => {
             if (error) {
                 console.log("error")
             }
         })
-        fs.appendFile("EADME.md", "##Credits\n" + response.credits + "\n", (error) => {
+        fs.appendFile("EADME.md", "## Credits\n" + response.credits + "\n", (error) => {
             if (error) {
                 console.log("error")
             }
         })
-        fs.appendFile("EADME.md", "##License\n" + response.license + "\n", (error) => {
+        fs.appendFile("EADME.md", "## License\n" + response.license + "\n", (error) => {
             if (error) {
                 console.log("error")
             }
         })
-        fs.appendFile("EADME.md", "##Tests\n" + response.test + "\n", (error) => {
+        fs.appendFile("EADME.md", "## Tests\n" + response.test + "\n", (error) => {
             if (error) {
                 console.log("error")
             }
         })
-        fs.appendFile("EADME.md", "##Question\n" + response.question + "\n", (error) => {
+        fs.appendFile("EADME.md", "## Question\n" + response.question + "\n", (error) => {
             if (error) {
                 console.log("error")
             }
