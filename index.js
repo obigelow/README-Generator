@@ -56,7 +56,7 @@ inquirer
                 console.log("error")
             }
         })
-        fs.appendFile("EADME.md", "[Title](#" + titleContent +")\n[Description](#Description)\n[Installation](#Installation)\n[Usage](#Usage)\n[Credits](#Credits)\n[License](#License)\n[Tests](#Tests)\n[Question](#Question)\n", (error) => {
+        fs.appendFile("EADME.md", "## Table of Contents \n[Title](#" + titleContent +")\n[Description](#Description)\n[Installation](#Installation)\n[Usage](#Usage)\n[Credits](#Credits)\n[License](#License)\n[Tests](#Tests)\n[Question](#Question)\n", (error) => {
             if (error) {
                 console.log("error")
             }
