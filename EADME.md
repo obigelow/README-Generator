@@ -1,24 +1,23 @@
-# Read Me
-## Table of Contents 
-[Title](#read-me)
-[Description](#Description)
-[Installation](#Installation)
-[Usage](#Usage)
-[Credits](#Credits)
-[License](#License)
-[Tests](#Tests)
-[Question](#Question)
+# Read Me Creator
+s program will generate a readme.md file by answering a few short questions. It we be formatted like a professinail readme
 ## Credits
-4uhti4hfoiu3hfoiuhfoiuhoiuh
+Oliver Bigelow
 ## License
 1
-## Usage
-3qifuh3ofhou3hfhf8hfoiuehqfoiuhfoiuwhopiuh3o4
-## Question
-wfe3tr
-## Description
-It does some random stuff
 ## Tests
-wwwwwwwwrrrrwefrgwegergetgeefrwr
+IDK
+## Question
+ [GitHub Profile](https://github.com/obigelow)IDK
+## Table of Contents 
+ * [Title](#read-me-creator)
+ * [Description](#Description)
+ * [Installation](#Installation)
+ * [Usage](#Usage)
+ * [Credits](#Credits)
+ * [License](#License)
+ * [Tests](#Tests)
+ * [Question](#Question)
 ## Installation
-wfbqpiufhpiufhpqirfhupi3urhfpiufhp2iuhgpq
+You need inquirer from npm and you can use the fs library. You also need node.js to be dowloaded on your computer"
+## Usage
+You run it in the terminal and answer a few prompted questions

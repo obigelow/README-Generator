@@ -44,6 +44,11 @@ inquirer
             message: "Questions?",
             name: "question"
         },
+        {
+            type: "input",
+            message: "What is your github username",
+            name: "github"
+        },
     ]).then(response => {
         var titleContent = response.project.toLowerCase().split(" ").join("-")
         fs.writeFile("EADME.md", "# " + response.project + "\n", (error) => {
@@ -56,7 +61,7 @@ inquirer
                 console.log("error")
             }
         })
-        fs.appendFile("EADME.md", "## Table of Contents \n[Title](#" + titleContent +")\n[Description](#Description)\n[Installation](#Installation)\n[Usage](#Usage)\n[Credits](#Credits)\n[License](#License)\n[Tests](#Tests)\n[Question](#Question)\n", (error) => {
+        fs.appendFile("EADME.md", "## Table of Contents \n * [Title](#" + titleContent +")\n * [Description](#Description)\n * [Installation](#Installation)\n * [Usage](#Usage)\n * [Credits](#Credits)\n * [License](#License)\n * [Tests](#Tests)\n * [Question](#Question)\n", (error) => {
             if (error) {
                 console.log("error")
             }
@@ -86,7 +91,7 @@ inquirer
                 console.log("error")
             }
         })
-        fs.appendFile("EADME.md", "## Question\n" + response.question + "\n", (error) => {
+        fs.appendFile("EADME.md", "## Question\n [GitHub Profile](https://github.com/" + response.github + ")" + response.question + "\n", (error) => {
             if (error) {
                 console.log("error")
             }
