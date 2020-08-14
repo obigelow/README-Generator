@@ -1,13 +1,18 @@
-# Read Me Creator
-s program will generate a readme.md file by answering a few short questions. It we be formatted like a professinail readme
+# read me creator
+o install necessary dependencies, run the following command:
+```
+npm i
+```
+## Description
+this program will create a pro read me based on info given
 ## Credits
 Oliver Bigelow
 ## License
-1
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)]
 ## Tests
-IDK
-## Question
- [GitHub Profile](https://github.com/obigelow)IDK
+To run tests, run the following command:
+```npm test
+```
 ## Table of Contents 
  * [Title](#read-me-creator)
  * [Description](#Description)
@@ -17,7 +22,9 @@ IDK
  * [License](#License)
  * [Tests](#Tests)
  * [Question](#Question)
-## Installation
-You need inquirer from npm and you can use the fs library. You also need node.js to be dowloaded on your computer"
 ## Usage
-You run it in the terminal and answer a few prompted questions
+You answer the questions that are given to you in the commad line
+## Question
+ * [GitHub Profile](https://github.com/obigelow)
+* Email: undefined
+ * If you have any questions email me and checkout my github profile for updates.
