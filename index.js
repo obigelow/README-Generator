@@ -54,17 +54,17 @@ inquirer
         },
     ]).then(response => {
         var titleContent = response.project.toLowerCase().split(" ").join("-")
-        fs.writeFile("EADME.md", "# " + response.project + "\n", (error) => {
+        fs.writeFile("EADME.md", `# ${response.project}\n`, (error) => {
             if (error) {
                 console.log("error")
             }
         })
-        fs.appendFile("EADME.md", "## Description\n" + response.description + "\n", (error) => {
+        fs.appendFile("EADME.md", `## Description\n${response.description}\n`, (error) => {
             if (error) {
                 console.log("error")
             }
         })
-        fs.appendFile("EADME.md", "## Table of Contents \n * [Title](#" + titleContent +")\n * [Description](#Description)\n * [Installation](#Installation)\n * [Usage](#Usage)\n * [Credits](#Credits)\n * [License](#License)\n * [Tests](#Tests)\n * [Question](#Question)\n", (error) => {
+        fs.appendFile("EADME.md", `## Table of Contents \n * [Title](#${titleContent})\n * [Description](#Description)\n * [Installation](#Installation)\n * [Usage](#Usage)\n * [Credits](#Credits)\n * [License](#License)\n * [Tests](#Tests)\n * [Question](#Question)\n`, (error) => {
             if (error) {
                 console.log("error")
             }
@@ -74,17 +74,17 @@ inquirer
                 console.log("error")
             }
         })
-        fs.appendFile("EADME.md", "## Usage\n" + response.use + "\n", (error) => {
+        fs.appendFile("EADME.md", `## Usage\n${response.use}\n`, (error) => {
             if (error) {
                 console.log("error")
             }
         })
-        fs.appendFile("EADME.md", "## Credits\n" + response.credits + "\n", (error) => {
+        fs.appendFile("EADME.md", `## Credits\n${response.credits}\n`, (error) => {
             if (error) {
                 console.log("error")
             }
         })
-        fs.appendFile("EADME.md", "## License\n[![GitHub license](https://img.shields.io/badge/license-"+ response.license + "-blue.svg)](https://github.com/" + response.github + ")\n", (error) => {
+        fs.appendFile("EADME.md", `## License\n[![GitHub license](https://img.shields.io/badge/license-${response.license}-blue.svg)](https://github.com/${response.github}/${titleContent})\n`, (error) => {
             if (error) {
                 console.log("error")
             }
@@ -94,7 +94,7 @@ inquirer
                 console.log("error")
             }
         })
-        fs.appendFile("EADME.md", "## Question\n * [GitHub Profile](https://github.com/" + response.github + ")\n" + "* Email: " + response.question + "\n * If you have any questions email me and checkout my github profile for updates.", (error) => {
+        fs.appendFile("EADME.md", `## Question\n * [GitHub Profile](https://github.com/${response.github})\n* Email: ${response.question} * If you have any questions email me and checkout my github profile for updates.`, (error) => {
             if (error) {
                 console.log("error")
             }
