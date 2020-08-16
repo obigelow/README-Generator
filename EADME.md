@@ -1,20 +1,6 @@
-# read me creator
-o install necessary dependencies, run the following command:
-```
-npm i
-```
-## Description
-this program will create a pro read me based on info given
-## Credits
-Oliver Bigelow
-## License
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)]
-## Tests
-To run tests, run the following command:
-```npm test
-```
-## Table of Contents 
- * [Title](#read-me-creator)
+# uiwhefiuehqf
+tents 
+ * [Title](#uiwhefiuehqf)
  * [Description](#Description)
  * [Installation](#Installation)
  * [Usage](#Usage)
@@ -22,8 +8,23 @@ To run tests, run the following command:
  * [License](#License)
  * [Tests](#Tests)
  * [Question](#Question)
+## Description
+wefdewggre
+## Installation
+ To install necessary dependencies, run the following command:
+```
+ewrgewr
+```
 ## Usage
-You answer the questions that are given to you in the commad line
+ergewrg
+## Credits
+ewrgewrg
+## License
+[![GitHub license](https://img.shields.io/badge/license-APACHE 2.0-blue.svg)](https://github.com/obigelow)
+## Tests
+To run tests, run the following command:
+```ewtgre
+```
 ## Question
  * [GitHub Profile](https://github.com/obigelow)
 * Email: undefined
