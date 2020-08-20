@@ -88,7 +88,7 @@ inquirer
             }
         })
         if (response.license !== "None") {
-            fs.appendFile("README.md", `## License\n[![GitHub license](https://img.shields.io/badge/license-${response.license}-blue.svg)](https://github.com/${response.github}/${titleContent})\n`, (error) => {
+            fs.appendFile("README.md", `## License\n[![GitHub license](https://img.shields.io/badge/license-${licenseContent}-blue.svg)](https://github.com/${response.github}/${titleContent})\n`, (error) => {
                 if (error) {
                     console.log("error")
                 }
