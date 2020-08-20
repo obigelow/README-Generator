@@ -55,6 +55,8 @@ inquirer
         },
     ]).then(response => {
         const titleContent = response.project.toLowerCase().split(" ").join("-")
+        const licenseContent = response.license.split(" ").join("%20")
+
         fs.writeFile("README.md", `# ${response.project}\n`, (error) => {
             if (error) {
                 console.log("error")
