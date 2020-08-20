@@ -2,6 +2,7 @@ const inquirer = require("inquirer")
 const fs = require("fs")
 
 
+
 inquirer
     .prompt([
         {
@@ -33,7 +34,7 @@ inquirer
         {
             type: "list",
             message: "Select a license",
-            choices: ["MIT","ISC", "APACHE 2.0", "GPL 3.0", "BSD 3", "None"],
+            choices: ["MIT", "ISC", "APACHE 2.0", "GPL 3.0", "BSD 3", "None"],
             name: "license"
         },
         {
@@ -53,52 +54,54 @@ inquirer
             name: "github"
         },
     ]).then(response => {
-        var titleContent = response.project.toLowerCase().split(" ").join("-")
-        fs.writeFile("EADME.md", `# ${response.project}\n`, (error) => {
+        const titleContent = response.project.toLowerCase().split(" ").join("-")
+        fs.writeFile("README.md", `# ${response.project}\n`, (error) => {
             if (error) {
                 console.log("error")
             }
         })
-        fs.appendFile("EADME.md", `## Description\n${response.description}\n`, (error) => {
+        fs.appendFile("README.md", `## Description\n${response.description}\n`, (error) => {
             if (error) {
                 console.log("error")
             }
         })
-        fs.appendFile("EADME.md", `## Table of Contents \n * [Title](#${titleContent})\n * [Description](#Description)\n * [Installation](#Installation)\n * [Usage](#Usage)\n * [Credits](#Credits)\n * [License](#License)\n * [Tests](#Tests)\n * [Question](#Question)\n`, (error) => {
+        fs.appendFile("README.md", `## Table of Contents \n * [Title](#${titleContent})\n * [Description](#Description)\n * [Installation](#Installation)\n * [Usage](#Usage)\n * [Credits](#Credits)\n * [License](#License)\n * [Tests](#Tests)\n * [Question](#Question)\n`, (error) => {
             if (error) {
                 console.log("error")
             }
         })
-        fs.appendFile("EADME.md", "## Installation\n To install necessary dependencies, run the following command:\n```\n" + response.install + "\n```\n", (error) => {
+        fs.appendFile("README.md", "## Installation\n To install necessary dependencies, run the following command:\n```\n" + response.install + "\n```\n", (error) => {
             if (error) {
                 console.log("error")
             }
         })
-        fs.appendFile("EADME.md", `## Usage\n${response.use}\n`, (error) => {
+        fs.appendFile("README.md", `## Usage\n${response.use}\n`, (error) => {
             if (error) {
                 console.log("error")
             }
         })
-        fs.appendFile("EADME.md", `## Credits\n${response.credits}\n`, (error) => {
+        fs.appendFile("README.md", `## Credits\n${response.credits}\n`, (error) => {
             if (error) {
                 console.log("error")
             }
         })
-        fs.appendFile("EADME.md", `## License\n[![GitHub license](https://img.shields.io/badge/license-${response.license}-blue.svg)](https://github.com/${response.github}/${titleContent})\n`, (error) => {
+        if (response.license !== "None") {
+            fs.appendFile("README.md", `## License\n[![GitHub license](https://img.shields.io/badge/license-${response.license}-blue.svg)](https://github.com/${response.github}/${titleContent})\n`, (error) => {
+                if (error) {
+                    console.log("error")
+                }
+            })
+        }
+        fs.appendFile("README.md", "## Tests\nTo run tests, run the following command:\n```" + response.test + "\n```\n", (error) => {
             if (error) {
                 console.log("error")
             }
         })
-        fs.appendFile("EADME.md", "## Tests\nTo run tests, run the following command:\n```" + response.test + "\n```\n", (error) => {
+        fs.appendFile("README.md", `## Question\n * [GitHub Profile](https://github.com/${response.github})\n* Email: ${response.question} * If you have any questions email me and checkout my github profile for updates.\n`, (error) => {
             if (error) {
                 console.log("error")
             }
         })
-        fs.appendFile("EADME.md", `## Question\n * [GitHub Profile](https://github.com/${response.github})\n* Email: ${response.question} * If you have any questions email me and checkout my github profile for updates.`, (error) => {
-            if (error) {
-                console.log("error")
-            }
-        })
-        
+
 
     })
