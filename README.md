@@ -1,4 +1,4 @@
-# read me generator
+# README Generator
 ## Usage
 You have to answer all of the prompted questions in the terminal
 
